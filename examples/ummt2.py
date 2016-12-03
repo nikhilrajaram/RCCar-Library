@@ -52,11 +52,11 @@ def distance(echo, trigger):
    stop = 0
    
    while GPIO.input(echo) == 0:
-      start = time.time()
+      start = time.clock()
       # loops for when echo terminal receives no sonic input
       
    while GPIO.input(echo) == 1:
-      stop = time.time()
+      stop = time.clock()
       # loops for when echo terminal receives a sonic input
    
    if stop != 0 and start != 0:
